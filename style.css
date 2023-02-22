@@ -13,7 +13,6 @@
 }
 
 .header{
-    border: 1px solid red;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -39,7 +38,6 @@
 }
 
 .header-name{
-    border: 1px solid black;
     width: 50%;   
     font-size: 33.28px; 
     font-weight: 700px;
@@ -47,12 +45,14 @@
     color: #155EEF;
 }
 
-.nav-link{
-    border: 1px solid purple;
-    display: flex;        
-    width: 50%;   
-    justify-content: space-around; 
-    height: 44px;    
+.nav-link{    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 97px;
+    width: 439px;
+    height: 44px;   
 }
 
 ul{
@@ -64,13 +64,37 @@ ul{
     list-style: none;
     display: inline;
     width: 100%;
-    font-size: 24px;    
+    font-size: 24px; 
+    font-family: 'Halant';     
 }
 
 .link{
     padding-top: 5px;
 }
 
+.link a{     
+    width: 66px;
+    height: 24px;    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    color: #000000;
+    text-decoration: none; 
+}
+
+.link a:visited {
+    border-bottom:2px solid #155EEf;
+}
+
+.link a:hover {
+    border-bottom: 2px solid #155EEf;
+}
+
+.link a:active {
+    border-bottom:2px solid #155EEf;
+}
+  
 li button{
     height: 44px;
     width: 94px;
@@ -79,14 +103,16 @@ li button{
     border: 1px solid #155EEF;
     border-radius: 8px;
     padding: 10px 16px 10px 16px;
-    font-family: 'Manrope', sans-serif;
-    color: #155EEF;
-    font-size: 16px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
     line-height: 150%;
+    letter-spacing: 0.5px;
+    color: #155EEF;
 }
 
 .bio{
-    border: 2px solid blue;
     display: flex;
     flex-direction: column;
     width: 1512px;
@@ -98,11 +124,10 @@ li button{
 }
 
 .bio-2{
-    border: 1px solid white;
     display: flex;
     width: 51px;
     height: 48px;    
-    font-family: 'Halant';
+    font-family: 'Halant', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -114,7 +139,7 @@ li button{
     width: 840px;
     height: 67px;     
     padding-top: 40px;
-    font-family: 'Halant';
+    font-family: 'Halant', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 56px;
@@ -125,7 +150,7 @@ li button{
     width: 818px;
     height: 144px;
     padding-top: 60px;
-    font-family: 'Manrope';
+    font-family: 'Manrope', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
@@ -154,7 +179,6 @@ li button{
 }
 
 .about-me{   
-    border: 2px solid orange;
     position: absolute;
     width: 1512px;
     height: 438px;
@@ -180,7 +204,7 @@ li button{
     margin-left: 793px;
     padding-top: 48px;
     height: 50px;
-    font-family: 'Halant';
+    font-family: 'Halant', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -194,7 +218,7 @@ li button{
     padding-top: 70px;
     margin-right: 0px;
     margin-left: 793px;
-    font-family: 'Manrope';
+    font-family: 'Manrope', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -224,6 +248,67 @@ li button{
 }
 
 footer{
-    border: 1px solid green;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 120px;
+    position: absolute;
+    width: 1512px;
     height: 88px;
+    left: 0px;
+    top: 1117px;
+    background: #080808;
+}
+
+footer section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    width: 424px;
+    height: 54.08px;
+}
+
+footer h1{
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    width: 205px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 33.28px;
+    line-height: 50px;
+    letter-spacing: -0.02em;
+
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+    width: 424px;
+    height: 24px;
+}
+
+footer ul li{   
+    left: 8.33%;
+    right: 8.33%;
+    top: 8.33%;
+    bottom: 8.54%;
+}
+
+footer h2{
+    width: 309px;
+    height: 36px;    
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
 }
