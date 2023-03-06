@@ -5,14 +5,14 @@
 }
 
 .container{
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100vh;
     margin: 0;
+    padding: 0;
     top: -19px;
     left: 168px;
-    box-sizing: border-box;
-    background: #000000;
-   
+    box-sizing: border-box;   
 }
 
 .header{
@@ -22,11 +22,9 @@
     justify-content: space-between;
     padding: 16px 120px;
     gap: 153px;    
-    position: absolute;
     width: 100%;
     height: 9vh;        
     background: #F1F5FE;    
-
 }
 
 .header-name{
@@ -35,19 +33,16 @@
     align-items: center;
     width: 259.08px;
     height: 54.08px;
-}
-
-.header-logo{
-    width: 54.08px;
-    height: 54.08px;
-}
-
-.header-name{
     width: 50%;   
     font-size: 33.28px; 
     font-weight: 700px;
     font-family: 'Manrope', sans-serif;
     color: #155EEF;
+}
+
+.header-logo{
+    width: 54.08px;
+    height: 54.08px;
 }
 
 .nav-link{    
@@ -119,17 +114,23 @@ li button{
 
 .bio{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     height: 535px;
     background: #000000;
-    padding-left: 120px;
-    top: 80px;
-    position: absolute;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bio-info{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 65%;
+    padding-left: 5%;
 }
 
 .bio-2{
-    display: flex;
     width: 51px;
     height: 48px;    
     font-family: 'Halant', sans-serif;
@@ -176,41 +177,44 @@ li button{
 }
 
 .joygirl-img{
-    position: absolute;
-    width: 443px;
-    height: 479px;
+    justify-content: center;
+    /* width: 28%; */
     right: 6.5%;
     top: 56px;
-    background-image: url(images/Joygirl\ 1\ 1.png);
+}
+
+.joygirl-img img{
+    width: 100%;
 }
 
 .about-me{   
-    position: absolute;
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    height: 438px;
-    left: 0px;
-    top: 647px;
+    height: 547px;
     background: #f5f8fe;
+    align-items: center;
+    justify-content: center;
 }
 
 .joygirl-img2{
-    position: absolute;
+    width: 75%;
+}
+
+.joygirl-img2 img {
+    width: 50%;
+    margin-left: 10%;
+}
+
+.about-info{
     display: flex;
     flex-direction: column;
-    justify-content: right;
-    width: 516px;
-    height: 374px;
-    left: 120px;
-    top: 32px;
-    background: url(images/Bio.png);
+    height: 100%;
+    width: 60%;
 }
 
 .about-me h2{    
-    position: absolute;
-    margin-right: 0px;
-    right: 25%;
-    left: 63%;
-    padding-top: 48px;
+    margin-top: 8%;
     height: 50px;
     font-family: 'Halant', sans-serif;
     font-style: normal;
@@ -221,11 +225,8 @@ li button{
 }
 
 .about-me p{
-    position: absolute;
     height: 180px;
-    width: 575px;    
-    padding-top: 7%;
-    right: 6.5%;
+    width: 575px;  
     font-family: 'Manrope', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -245,7 +246,6 @@ li button{
 
 .about-me button:first-of-type{
     position: absolute;
-    right: 28.6%;
     background: #155EEf;
     color: white;
     margin-top: 19%;
@@ -253,9 +253,9 @@ li button{
 
 .about-me button:nth-of-type(2){
     position: absolute;
-    right: 19%;
+    right: 25%;
     margin-top: 19%;
-    color: #155EEf;
+    color: #155EEf;   
 }
 
 footer{
@@ -324,24 +324,333 @@ footer h2{
     color: #FFFFFF;
 }
 
-@media only screen and (min-width: 768px){
 
-    .about-me h2{    
-        position: absolute;
-        right: 23.5%;
-        left: 55.6%;
-        padding-top: 48px;
+
+
+  @media only screen and (max-width:944px){
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow: hidden;    
     }
 
+    body{
+        min-height: 100%;
+        margin-bottom: 0px;
+}
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: inherit;
+        margin: 0;
+        text-align: center;
+        box-sizing: border-box; 
+         
+    }
+    
+    .header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 0px;
+        gap: 0;    
+        width: 100%;
+        height: 5vh;        
+        background: #F1F5FE;    
+    }
+    
+    .header-name{
+        display: flex;
+        flex-direction: row;
+        align-items: center;   
+        font-size: 16px; 
+        font-family: 'Manrope', sans-serif;
+        color: #155EEF;
+    }
+    
+    .header-logo{
+        width: 54.08px;
+        height: 54.08px;
+    }
+    
+    .nav-link{    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 97px;
+        width: 439px;
+        height: 44px;   
+    }
+    
+    ul{
+        display: flex;
+        width: 100%;    
+    }
+    
+    .nav-link li{    
+        list-style: none;
+        display: inline;
+        width: 100%;
+        font-size: 24px; 
+        font-family: 'Halant';     
+    }
+    
+    .link{
+        padding-top: 5px;
+    }
+    
+    .link a{     
+        width: 66px;
+        height: 24px;    
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 100%;
+        color: #000000;
+        text-decoration: none; 
+    }
+    
+    .link a:visited {
+        border-bottom:2px solid #155EEf;
+    }
+    
+    .link a:hover {
+        border-bottom: 2px solid #155EEf;
+    }
+    
+    .nav-link .link a:active {
+        border-bottom:2px solid #155EEf;
+    }
+      
+    li button{
+        height: 44px;
+        width: 94px;
+        left: 346.5px;
+        top: 0px;
+        border: 1px solid #155EEF;
+        border-radius: 8px;
+        padding: 10px 16px 10px 16px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 150%;
+        letter-spacing: 0.5px;
+        color: #155EEF;
+    }
+    
+    .bio{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 55vh;
+        background: #000000;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .bio-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 201px;
+        width: 100%;
+        padding: 0%;
+    }
+    
+    .bio-2{
+        width: 100%;    
+        font-family: 'Halant', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        padding-top: 1%;
+        color: #B8B8B8;
+    }
+    
+    .bio h1{
+        width: 840px;
+        height: 67px;     
+        padding-top: 0;
+        font-family: 'Halant', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        color: #FFFFFF;    
+    }
+    
+    .bio p{
+        width: 65%;
+        padding-top: 2%;
+        font-family: 'Manrope', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: #A3A3A3;
+    }
+    
+    .bio button{        
+        margin-top:15px;
+        width: 90%;
+        height: 44px;
+        margin-top: 2%;
+        background: #155EEF;
+        color: white;
+        border: 1px solid #155EEF;
+        border-radius: 8px; 
+    }
+    
+    .joygirl-img{
+        height: 55%;
+        width: auto;
+    }
+    
+    .joygirl-img img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .about-me{   
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 35vh;
+        background: #f5f8fe;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .joygirl-img2{
+        visibility: hidden;
+        width: 0;
+    }
+    
+    .about-info{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 60%;
+    }
+    
+    .about-me h2{    
+        margin-top: 2%;
+        height: 50px;
+        font-family: 'Halant', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 50px;
+        color: #000000;
+    }
+    
+    .about-me p{
+        height: 45%;
+        width: 100%;  
+        font-family: 'Manrope', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 36px;
+        text-align: left;
+        letter-spacing: 0.5px;
+        color: #000000;
+    }
+    
+    .about-me button {   
+        position: fixed; 
+        width: 160px;
+        height: 44px;
+        border-radius: 8px;
+        border: 2px solid #155EEF;
+    }
+    
     .about-me button:first-of-type{
-        position: absolute;
-        right: 34%;
-        margin-top: 20%;
+        position: fixed;
+        background: #155EEf;
+        color: white;
+        margin-top: 27%;
     }
     
     .about-me button:nth-of-type(2){
-        position: absolute;
-        right: 19%;
-        margin-top: 20%;
+        position: fixed;
+        right: 25%;
+        margin-top: 27%;
+        color: #155EEf;   
     }
+    
+    footer{
+        position:relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 120px;
+        position: absolute;
+        width: 100%;
+        height: 8vh;
+        left: 0px;
+        background: #080808;
+    }
+    
+    footer section{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0px;
+        width: 424px;
+        height: 54.08px;
+    } 
+    
+    footer h1{
+        color: white;
+        font-family: 'Manrope', sans-serif;
+        width: 205px;
+        height: 50px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 50px;
+        letter-spacing: -0.02em;
+    
+    }
+    
+    footer ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 32px;
+        width: 424px;
+        height: 24px;
+    }
+    
+    footer ul li{   
+        left: 8.33%;
+        right: 8.33%;
+        top: 8.33%;
+        bottom: 8.54%;
+    }
+    
+    footer h2{
+        width: 309px;
+        height: 36px;    
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 150%;
+        letter-spacing: 0.5px;
+        color: #FFFFFF;
+    }   
 }
+
