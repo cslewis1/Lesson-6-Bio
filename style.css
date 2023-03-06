@@ -324,9 +324,6 @@ footer h2{
     color: #FFFFFF;
 }
 
-
-
-
   @media only screen and (max-width:944px){
 
     * {
@@ -340,7 +337,6 @@ footer h2{
         min-height: 100%;
         margin-bottom: 0px;
 }
-    }
     
     .container{
         display: flex;
